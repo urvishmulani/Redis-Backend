@@ -1,0 +1,15 @@
+#!/usr/bin/env node
+
+
+const config=require('./config/config.js')
+var app = require('../app');
+var http = require('http');
+var port = config.PORT
+console.log(port)
+app.set('port', port);
+
+app.listen(port,()=>{
+    console.log("Connected to Backend")
+})
+
+module.exports=app
